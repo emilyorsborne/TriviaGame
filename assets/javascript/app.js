@@ -1,13 +1,3 @@
-// // variable that will hold all of the correct answers
-// var correctAnswers = [];
-
-// // variable that will hold all of the users answers
-// var userAnswers = [];
-
-// correctAnswers = 
-
-
-
 
 //timer
 function startTimer(duration, display) {
@@ -33,31 +23,26 @@ window.onload = function () {
     startTimer(twoMinutes, display);
 };
 
+// function timeUp() {
+//     if (startTimer === 0) {
+//         alert("Time is up!");
+
+//     }
+// }
+// timeUp();
+
 
 
 var correctAnswers = [
+    'B',
+    'D',
     'A',
     'B',
-    'C',
-    'D',
-    'A'
+    'C'
 ]; 
-// var questionObj = { 
-//     "category": "Mythology", 
-//     "type": "boolean", 
-//     "difficulty": "easy", 
-//     "question": "In Norse mythology, Thor once dressed as a woman.", 
-//     "correct_answer": 'A', 
-//     "incorrect_answers": ['A', 'B', 'C', 'D'] }
-// }
 
-//
-// When my HTML document object model is completed loaded, meaning the entire HTML
-// has been parsed by the browser and the DOM created in memory
-//
-// Then do the actions in the ready callback function
-//
-$( document ).ready(function() {
+
+$(document).ready(function() {
 
     console.log( "ready!" );
 
@@ -66,11 +51,7 @@ $( document ).ready(function() {
         console.log("Clicked the submit answers button!!!");
 
         var jQueryAnswers = [];
-        //
-        // Select all the HTML input things from the DOM,
-        // then loop through that collection returned by jQuery
-        // and for each thing in the collection do some stuff
-        //
+
         $("input[class='answer']:checked").each( function() {
 
             jQueryAnswers.push( $(this) );
@@ -79,10 +60,7 @@ $( document ).ready(function() {
 
         console.log("Gather my answers!!!");
 
-        //
-        // Loop through the array and for each jquery object
-        // do some stuff 
-        //
+
         for (var i = 0; i < correctAnswers.length; i++) {
 
             var userAnswer = jQueryAnswers[i].val();
@@ -98,7 +76,7 @@ $( document ).ready(function() {
 
         }
 
-        // console.log( jQueryAnswers );
+        console.log( jQueryAnswers );
 
     });
 
